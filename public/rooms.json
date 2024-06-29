@@ -1,0 +1,93 @@
+[
+    {
+      "_id": 1,
+      "room_type": "Standard Room",
+      "description": "Our Standard Room offers a cozy retreat with modern amenities, perfect for both solo travelers and couples seeking comfort and convenience. Enjoy a peaceful night's sleep on our plush beds after exploring the city. Ideal for short stays or business trips.",
+      "price_per_night": 100,
+      "size": "300 sq ft",
+      "availability": "available",
+      "room_image": "https://i.ibb.co/qj20PRH/standardroom-1878.jpg",
+      "special_offers": "10% off on bookings for next month",
+      "reviews": [
+        {"name": "Emily Johnson", "rating": 4.5, "comment": "Great value for money."},
+        {"name": "Michael Brown", "rating": 4.2, "comment": "Clean and well-maintained."},
+        {"name": "Sarah Lee", "rating": 4.8, "comment": "Friendly staff and convenient location."}
+      ]
+    },
+    {
+      "_id": 2,
+      "room_type": "Deluxe Suite",
+      "description": "Step into luxury with our Deluxe Suite, offering spacious living areas and elegant decor. Ideal for families or executives seeking extra comfort and style. Enjoy breathtaking city views and unwind in the privacy of your own suite.",
+      "price_per_night": 250,
+      "size": "500 sq ft",
+      "availability": "available",
+      "room_image": "https://i.ibb.co/1zKKgK2/images-q-tbn-ANd9-Gc-SJOWx-QZmqcm-Wnd-Lfv-Q05d-Tu-Kd-Hi-XXV4r6-KMA-s.jpg",
+      "special_offers": "Free breakfast included",
+      "reviews": [
+        {"name": "John Smith", "rating": 4.9, "comment": "Luxurious and comfortable."},
+        {"name": "Emma Davis", "rating": 4.6, "comment": "Excellent service and amenities."},
+        {"name": "James Wilson", "rating": 5.0, "comment": "Highly recommended for a relaxing stay."}
+      ]
+    },
+    {
+      "_id": 3,
+      "room_type": "Family Room",
+      "description": "Our spacious Family Room is perfect for groups and families, offering multiple beds and ample space to relax and reconnect. Enjoy modern conveniences and thoughtful amenities that ensure a comfortable stay for all ages.",
+      "price_per_night": 180,
+      "size": "400 sq ft",
+      "availability": "available",
+      "room_image": "https://i.ibb.co/GPjYgXy/images-q-tbn-ANd9-Gc-REi-H6-C6-NRFb0-S3h-BIUob-Bu-Kay-Qz-YPq-M2x-g-s.jpg",
+      "special_offers": "Kids stay free under 12 years old",
+      "reviews": [
+        {"name": "Jessica Clark", "rating": 4.7, "comment": "Perfect for our family vacation."},
+        {"name": "David Moore", "rating": 4.3, "comment": "Spacious and clean."},
+        {"name": "Lisa Robinson", "rating": 4.5, "comment": "Friendly staff and good facilities."}
+      ]
+    },
+    {
+      "_id": 4,
+      "room_type": "Executive Suite",
+      "description": "Indulge in luxury with our Executive Suite, featuring premium furnishings, exclusive amenities, and stunning views of the city skyline. Perfect for discerning guests seeking comfort, privacy, and impeccable service.",
+      "price_per_night": 350,
+      "size": "600 sq ft",
+      "availability": "not-available",
+      "room_image": "https://i.ibb.co/NN3fwtM/don-chan-palace-executive-suite-overview2.jpg",
+      "special_offers": "",
+      "reviews": [
+        {"name": "Andrew White", "rating": 4.8, "comment": "Exceptional service and comfort."},
+        {"name": "Olivia Taylor", "rating": 4.9, "comment": "Beautifully appointed rooms."},
+        {"name": "Daniel Martinez", "rating": 4.7, "comment": "Perfect for a business trip."}
+      ]
+    },
+    {
+      "_id": 5,
+      "room_type": "Honeymoon Suite",
+      "description": "Celebrate romance in our luxurious Honeymoon Suite, featuring a private balcony, sumptuous furnishings, and a spa-like bathroom. Perfect for couples seeking intimacy and unforgettable moments in a breathtaking setting.",
+      "price_per_night": 400,
+      "size": "700 sq ft",
+      "availability": "available",
+      "room_image": "https://i.ibb.co/fNBngbD/honeymoon-decor-pic7.jpg",
+      "special_offers": "Complimentary champagne and chocolates",
+      "reviews": [
+        {"name": "Sophia King", "rating": 4.9, "comment": "Perfect for a honeymoon."},
+        {"name": "William Brown", "rating": 5.0, "comment": "Absolutely stunning suite."},
+        {"name": "Mia Johnson", "rating": 4.8, "comment": "Wonderful service and ambiance."}
+      ]
+    },
+    {
+      "_id": 6,
+      "room_type": "Business Room",
+      "description": "Designed for corporate travelers, our Business Room offers modern amenities and a dedicated workspace. Stay productive with high-speed internet and enjoy a comfortable environment ideal for work and relaxation.",
+      "price_per_night": 200,
+      "size": "350 sq ft",
+      "availability": "available",
+      "room_image": "https://i.ibb.co/TYGrZvy/orchid-business-hotel.jpg",
+      "special_offers": "Free high-speed internet",
+      "reviews": [
+        {"name": "Robert Wilson", "rating": 4.6, "comment": "Great for work trips."},
+        {"name": "Ella Thompson", "rating": 4.4, "comment": "Comfortable and efficient."},
+        {"name": "Jack Harris", "rating": 4.7, "comment": "Good location and professional service."}
+      ]
+    }
+  ]
+  
