@@ -10,6 +10,7 @@ import MyBookings from "../pages/MyBookings";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import Contact from "../pages/Contact";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -44,7 +45,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'myBookings',
-                element: <MyBookings></MyBookings>,
+                element: <PrivateRoute><MyBookings></MyBookings></PrivateRoute>,
                 loader: ()=>fetch(`http://localhost:5000/rooms`)
             }
         ]
