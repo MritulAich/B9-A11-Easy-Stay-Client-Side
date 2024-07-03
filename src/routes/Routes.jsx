@@ -7,6 +7,7 @@ import Rooms from "../pages/Rooms";
 import Home from "../shared/homepage/Home";
 import RoomDetails from "../pages/RoomDetails";
 import MyBookings from "../pages/MyBookings";
+import Login from "../pages/Login";
 
 export const router = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
             {
                 path: 'rooms',
                 element: <Rooms></Rooms>
+            },
+            {
+                path: 'login',
+                element: <Login></Login>
             },
             {
                 path: 'roomDetails/:_id',

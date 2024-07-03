@@ -8,28 +8,28 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider;
 
 
-const AuthProvider = ({children}) => {
-    const [user, setUser] = useState(null);
+const AuthProvider = ({ children }) => {
+    const [user, setUser] = useState();
 
 
-    const createUser = (email, password)=>{
-       return createUserWithEmailAndPassword(auth, email, password)
+    const createUser = (email, password) => {
+        return createUserWithEmailAndPassword(auth, email, password)
     }
-    const signIn = (email, password)=>{
+    const signIn = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
-    const signInWithGoogle =()=>{
+    const signInWithGoogle = () => {
         return signInWithPopup(auth, provider)
     }
 
-    const logOut =()=>{
+    const logOut = () => {
         return signOut(auth)
     }
-    useEffect(()=>{
-        const unSubscribe = onAuthStateChanged(auth, currentUser=>{
+    useEffect(() => {
+        const unSubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
         });
-        return()=>{
+        return () => {
             unSubscribe()
         }
     })
