@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet";
 
 const SignUp = () => {
 
@@ -28,6 +29,11 @@ const SignUp = () => {
 
 
     return (
+        <div>
+            <Helmet>
+                <title>Sign Up</title>
+            </Helmet>
+        
         <div className="flex flex-col justify-center items-center my-16">
             <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-gray-50 text-gray-800">
                 <h2 className="mb-3 text-3xl font-semibold text-center">Registration</h2>
@@ -64,6 +70,7 @@ const SignUp = () => {
                     <h2>Have an account? Go to <Link to='/login' className="font-bold">Login</Link></h2>
             </div>
             <ToastContainer />
+        </div>
         </div>
     );
 };

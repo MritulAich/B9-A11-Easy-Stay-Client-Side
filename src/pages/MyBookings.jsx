@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -44,6 +45,9 @@ const MyBookings = () => {
 
     return (
         <div className='lg:m-5 md:m-3 lg:mt-10 mt-6'>
+            <Helmet>
+                <title>User Bookings</title>
+            </Helmet>
             <table className="table ">
                 <thead>
                     <tr className="lg:text-lg md:text-lg">
