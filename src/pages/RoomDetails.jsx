@@ -1,12 +1,13 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const RoomDetails = () => {
-    const rooms = useLoaderData();
-    const { id } = useParams();
-    const idInt = parseInt(id);
-    const room = rooms.find(e => e._id === idInt);
-    
-    return (
+    const room = useLoaderData();
+    // const { id } = useParams();
+    // const idInt = parseInt(id);
+    // const room = rooms.find(e => e.id === idInt);
+
+    return (   
         <div className="bg-base-200 flex flex-col  gap-10 p-6">
             <div>
                 <img className="rounded-xl lg:w-[750px] lg:h-[500px]" src={room.room_image} />
@@ -21,6 +22,9 @@ const RoomDetails = () => {
                 
                 <button className="btn btn-warning text-lg">Book Now</button> <span className="text-xl mr-2 ml-4">For</span><span className='text-2xl text-green-700 underline font-semibold mb-1'>${room.price_per_night}</span>
             </div>
+            <Helmet>
+                <title>Room Details</title>
+            </Helmet>
         </div>
     );
 };
