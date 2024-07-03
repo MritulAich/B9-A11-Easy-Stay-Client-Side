@@ -9,6 +9,7 @@ import RoomDetails from "../pages/RoomDetails";
 import MyBookings from "../pages/MyBookings";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
+import Contact from "../pages/Contact";
 
 export const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
             {
                 path: 'signUp',
                 element: <SignUp></SignUp>
+            },
+            {
+                path: 'contact',
+                element: <Contact></Contact>
             },
             {
                 path: 'roomDetails/:_id',
