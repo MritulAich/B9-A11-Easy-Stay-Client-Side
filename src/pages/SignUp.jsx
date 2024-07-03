@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { AuthContext } from "../AuthProvider";
+import { AuthContext } from "../provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -16,13 +16,7 @@ const SignUp = () => {
         console.log(email, password);
 
         if (password.length < 6) {
-            alert('Password must contain minimum 6 characters')
-        }
-        else if (!/[A-Z]/.test(password)) {
-            alert('Password must contain at least one uppercase letter')
-        }
-        else if (!/[a-z]/.test(password)) {
-            alert('Password must contain at least one lowercase letter');
+            toast('Password must contain minimum 6 characters')
         }
         else (toast('You have registered successfully'));
 
@@ -34,7 +28,7 @@ const SignUp = () => {
 
 
     return (
-        <div className="flex flex-col justify-center items-center my-8">
+        <div className="flex flex-col justify-center items-center my-16">
             <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 bg-gray-50 text-gray-800">
                 <h2 className="mb-3 text-3xl font-semibold text-center">Registration</h2>
 
@@ -55,7 +49,7 @@ const SignUp = () => {
                         <label className="label">
                             <span className="label-text">Photo</span>
                         </label>
-                        <input type="file" className="input input-bordered" required />
+                        <input type="file" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">

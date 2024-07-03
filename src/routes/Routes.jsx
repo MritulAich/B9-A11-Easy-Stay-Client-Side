@@ -8,6 +8,7 @@ import Home from "../shared/homepage/Home";
 import RoomDetails from "../pages/RoomDetails";
 import MyBookings from "../pages/MyBookings";
 import Login from "../pages/Login";
+import SignUp from "../pages/SignUp";
 
 export const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
             {
                 path: 'login',
                 element: <Login></Login>
+            },
+            {
+                path: 'signUp',
+                element: <SignUp></SignUp>
             },
             {
                 path: 'roomDetails/:_id',
