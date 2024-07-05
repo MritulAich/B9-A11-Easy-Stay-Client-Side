@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const MyBookings = () => {
     const loadRooms = useLoaderData();
     const [rooms, setRoom] = useState(loadRooms);
+    const [startDate, setStartDate] = useState(new Date());
 
     const handleCancel = _id => {
         Swal.fire({
@@ -50,6 +53,7 @@ const MyBookings = () => {
                         <th>Cost</th>
                         <th>Cancel Booking</th>
                         <th>Update Date</th>
+                        <th>Review</th>
                     </tr>
                 </thead>
                 {rooms.map(room =>
@@ -57,10 +61,11 @@ const MyBookings = () => {
                         <tr className="hover">
                             <th>{room.room_type}</th>
                             <td>{room.price_per_night}</td>
-                            <td><div onClick={() => handleCancel(room._id)} className="btn btn-neutral">Cancel</div></td>
+                            <td><div onClick={() => handleCancel(room._id)} className="btn btn-error">Cancel</div></td>
                             <td className="space-y-1">
-                                <div className="btn btn-accent">Update</div>
+                                <DatePicker showIcon selected={startDate} onChange={(date) => setStartDate(date)} />
                             </td>
+                            <td><Link to='/review' className="font-medium">Write</Link></td>
                         </tr>
                     </tbody>
                 )}

@@ -44,7 +44,7 @@ const RoomDetails = () => {
                 <p className="font-medium my-2 text-lg">Offers & deals : {room.special_offers}</p>
 
 
-                <h2 className="text-xl font-semibold text-center underline mt-8 mb-3 text-yellow-700">Reviews:</h2>
+                <h2 className="text-xl font-semibold text-center underline mt-8 mb-3 text-yellow-700">Total Reviews: {room.reviews.length}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
                     <div>
                         <p className="text-lg font-medium">{room.reviews[0].name}</p>

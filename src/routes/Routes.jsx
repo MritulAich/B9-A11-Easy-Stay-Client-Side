@@ -11,6 +11,7 @@ import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import Contact from "../pages/Contact";
 import PrivateRoute from "./PrivateRoute";
+import Review from "../pages/Review";
 
 export const router = createBrowserRouter([
     {
@@ -47,6 +48,10 @@ export const router = createBrowserRouter([
                 path: 'myBookings',
                 element: <PrivateRoute><MyBookings></MyBookings></PrivateRoute>,
                 loader: ()=>fetch(`http://localhost:5000/rooms`)
+            },
+            {
+                path:'review',
+                element: <Review></Review>
             }
         ]
     },
