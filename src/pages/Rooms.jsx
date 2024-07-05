@@ -15,7 +15,7 @@ const Rooms = () => {
             <Helmet>
                 <title>Hotel Rooms</title>
             </Helmet>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-10">
                 {
                     rooms.map(room => <div key={room._id} className="card bg-base-100 w-96 shadow-xl">
                         <Link to={`/roomDetails/${room._id}`}><figure>

@@ -39,9 +39,9 @@ export const router = createBrowserRouter([
                 element: <Contact></Contact>
             },
             {
-                path: 'roomDetails/:_id',
+                path: 'roomDetails/:id',
                 element: <RoomDetails></RoomDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params._id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
             },
             {
                 path: 'myBookings',

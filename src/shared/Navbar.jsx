@@ -38,8 +38,8 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end lg:flex lg:flex-row md:flex-row flex-col gap-4 ml-5">
-        <Link to='/signUp' className="btn btn-primary">Sign Up</Link>
-        <Link to='/login' className="btn btn-warning">Login</Link>
+        <Link to='/signUp' className="btn btn-primary btn-outline">Sign Up</Link>
+        <Link to='/login' className="btn btn-primary btn-outline">Login</Link>
         <button onClick={handleLogOut} className="btn btn-neutral">Log out</button>
       </div>
     </div>
