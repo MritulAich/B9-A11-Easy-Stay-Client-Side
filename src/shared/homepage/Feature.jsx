@@ -12,18 +12,17 @@ const Feature = () => {
 
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
-    const handleBookNow=()=>{
-        if(user)
-            {return console.log('go to details page');}
-        else{
+    const handleBookNow = () => {
+        if (user) { return console.log('go to details page'); }
+        else {
             navigate('/login')
         }
     }
 
     return (
-        <div className="my-24">
+        <div className="my-24 mx-10">
             <h2 className='text-4xl font-semibold text-center my-10'>Featured Rooms:</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {
                     rooms.map(room => <div key={room._id} className="card bg-base-100 w-96">
                         <Link to={`/roomDetails/${room._id}`}><figure>
@@ -39,7 +38,8 @@ const Feature = () => {
                         </div>
                     </div>)
                 }
-            </div></div>
+            </div>
+        </div>
     );
 };
 

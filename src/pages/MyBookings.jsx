@@ -42,18 +42,18 @@ const MyBookings = () => {
     }
 
     return (
-        <div className='lg:m-5 md:m-3 lg:mt-10 mt-6'>
+        <div className='lg:m-5 md:m-3 lg:mt-10 mt-6 '>
             <Helmet>
                 <title>User Bookings</title>
             </Helmet>
-            <table className="table ">
+            <table className="table">
                 <thead>
                     <tr className="lg:text-lg md:text-lg">
                         <th>Room Category</th>
                         <th>Cost</th>
                         <th>Cancel Booking</th>
                         <th>Update Date</th>
-                        <th>Review</th>
+                        <th className="fixed -ml-24">Review</th>
                     </tr>
                 </thead>
                 {rooms.map(room =>
@@ -65,7 +65,7 @@ const MyBookings = () => {
                             <td className="space-y-1">
                                 <DatePicker showIcon selected={startDate} onChange={(date) => setStartDate(date)} />
                             </td>
-                            <td><Link to='/review' className="font-medium">Write</Link></td>
+                            <td className="fixed -ml-24"><Link to='/review' className="font-medium">Write</Link></td>
                         </tr>
                     </tbody>
                 )}
