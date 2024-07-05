@@ -1,12 +1,21 @@
 import { useContext } from "react";
 import { Helmet } from "react-helmet";
-import { Navigate, useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const RoomDetails = () => {
     const room = useLoaderData();
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const handleBookNow=()=>{
+        if(user)
+            {return console.log('hi');}
+        else{
+            navigate('/login')
+        }
+    }
 
     const handleConfirm =()=>{
         Swal.fire({
@@ -30,7 +39,8 @@ const RoomDetails = () => {
                 <p className="text-lg my-5">{room.description}</p>
                 <p className="font-medium my-4 text-lg">Offers & deals : {room.special_offers}</p>
 
-                <button className="btn btn-warning text-lg" onClick={() => document.getElementById('my_modal_2').showModal()}>Book Now</button>
+                
+                <button className="btn btn-warning text-lg" onClick={() => {handleBookNow(); document.getElementById('my_modal_2').showModal()}}>Book Now</button>
                 <dialog id="my_modal_2" className="modal">
                     <div className="modal-box">
                         <h3 className="font-semibold text-lg">Room Summary</h3>
@@ -42,7 +52,8 @@ const RoomDetails = () => {
                         <button>close</button>
                     </form>
                 </dialog>
-
+                
+                
                 <span className="text-xl mr-2 ml-4">For</span><span className='text-2xl text-green-700 underline font-semibold mb-1'>${room.price_per_night}</span>
             </div>
             <Helmet>

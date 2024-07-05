@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -6,11 +6,6 @@ import Swal from "sweetalert2";
 const MyBookings = () => {
     const loadRooms = useLoaderData();
     const [rooms, setRoom] = useState(loadRooms);
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/rooms')
-    //         .then(res => res.json())
-    //         .then(data => setRoom(data))
-    // }, [])
 
     const handleCancel = _id => {
         Swal.fire({
@@ -20,7 +15,7 @@ const MyBookings = () => {
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Cancel Booking"
+            confirmButtonText: "Yes"
         }).then((result) => {
             if (result.isConfirmed) {
                 fetch(`http://localhost:5000/rooms/${_id}`, {
