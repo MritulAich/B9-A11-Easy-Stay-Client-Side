@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useContext, useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../provider/AuthProvider';
 
 const Feature = () => {
     const [rooms, setRoom] = useState([]);
@@ -8,6 +9,16 @@ const Feature = () => {
             .then(res => res.json())
             .then(data => setRoom(data))
     }, [])
+
+    const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const handleBookNow=()=>{
+        if(user)
+            {return console.log('go to details page');}
+        else{
+            navigate('/login')
+        }
+    }
 
     return (
         <div className="my-24">
@@ -24,7 +35,7 @@ const Feature = () => {
                         <div className="bg-[#F3F3F3]">
                             <h2 className="card-title m-4 mb-1">{room.room_type}</h2>
                             <p className='text-lg ml-4 mb-3'>Price per Night: <span className='text-green-600 font-semibold'>${room.price_per_night}</span></p>
-                            <button className="btn btn-accent ml-36 mb-4">Book Now</button>
+                            <button onClick={handleBookNow} className="btn btn-accent ml-36 mb-4">Book Now</button>
                         </div>
                     </div>)
                 }
